@@ -190,7 +190,7 @@
        font-size: 38px;
        font-weight: bold;
        font-family:"Source Sans Pro",sans-serif;
-       
+       margin-top: 20px;
        letter-spacing: 3px;
 
 
@@ -270,18 +270,22 @@
     border-color:#8080805c ;
     border: 1px;
     border-radius: 4px;
-    padding: 0.7rem  1.2rem;
+    padding: 1rem  2.2rem;
     font-size: 16px;
     font-weight: bold;
     font-family:"Source Sans Pro",sans-serif ;
     letter-spacing: 1px;
     margin-right: 15px;
+    margin-bottom: 15px;
+    
+
     
     
 
    }
    .skills-list{
     margin-left: 80px;
+    
   
    }
    
@@ -290,6 +294,7 @@
     font-size: 26px;
     margin-left: 80px;
     font-family:"Source Sans Pro",sans-serif ;
+    
    }
    .project-section{
         text-align: center;
@@ -300,7 +305,7 @@
        font-size: 38px;
        font-weight: bold;
        font-family:"Source Sans Pro",sans-serif;
-       
+       margin-top: 20px;
        letter-spacing: 3px;
 
 
@@ -530,14 +535,14 @@
     </div>
 </div>
       <div class="nav-item">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">CONTACT</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </div>
 </div>
-    <div class="home-section">
+    <div class="home-section" id="home">
         <div class="home-info">
             <div class="home-info1">
                 <h2>HEY, MY NAME IS RISHITHA BONENI</h2>
@@ -546,32 +551,28 @@
                 <p>Aspiring Front-End developer with a strong foundation in programming and problem-solving,
                      seeking an opportunity to learn new technologies and contribute to innovative projects in a dynamic team environment.</p>
             </div>
-            <button class="project-btn"  > PROJECTS</button>
+           <a href="#projects"> <button class="project-btn" > PROJECTS</button></a>
 
         </div>
         <div class="social-media-icons">
             <div class="media-icon">
-                <a href="#" class="social-icon-link">
+                <a href="https://www.linkedin.com/in/rishitha-boneni?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon-link">
                 <img src="	https://excelrfs.netlify.app/assets/png/linkedin-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
             <div class="media-icon">
-                <a href="#" class="social-icon-link">
+                <a href="https://github.com" class="social-icon-link">
                 <img src="https://excelrfs.netlify.app/assets/png/github-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
+            
             <div class="media-icon">
-                <a href="#" class="social-icon-link">
-                <img src="https://excelrfs.netlify.app/assets/png/twitter-ico.png" alt="icon" class="social-icon">
-                </a>
-            </div>
-            <div class="media-icon">
-                <a href="#" class="social-icon-link">
+                <a href="https://www.youtube.com/@bonenirishitha3969" class="social-icon-link">
                 <img src="	https://excelrfs.netlify.app/assets/png/yt-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
             <div class="media-icon">
-                <a href="#" class="social-icon-link">
+                <a href="https://www.instagram.com/rishitha_boneni/" class="social-icon-link">
                 <img src="https://excelrfs.netlify.app/assets/png/insta-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
@@ -585,7 +586,7 @@
                 </div>
               </div>
     </div>
-    <div class="about-section">
+    <div class="about-section" id="about">
         <div class="ab">
             <div class="about-heading">
                 ABOUT ME
@@ -618,8 +619,10 @@
                 <div class="skills-list">
                     <button class="html">HTML</button>
                     <button class="html">CSS</button>
-                    <button class="html">Java</button>
                     <button class="html">JavaScript</button>
+                    <button class="html">React</button>
+                    <button class="html">Java</button>
+                    <button class="html">MySql</button>
 
                 </div>
 
@@ -632,7 +635,7 @@
 
     </div>
 
-    <div class="project-section">
+    <div class="project-section" id="projects">
         <div class="prjct">
             <div class="heading">
                PROJECTS
@@ -652,7 +655,7 @@
              <h3 class="title">Project 1</h3>  
                 <p class="prjct-data">A personal website built using HTML, CSS, and JavaScript to showcase my skills, projects, and contact details. The site is fully responsive, features smooth animations
                 </p>
-                <a class="cs-btn" href="" target="_blank">Case Study</a>
+                <a class="cs-btn" href="case-study1.html" target="_blank">Case Study</a>
                 </div>
         </div>
         <div class="project-infor">
@@ -661,9 +664,10 @@
             </div>
             <div class="project-content">
              <h3 class="title">Project 2</h3>  
-                <p class="prjct-data">A stylish and interactive landing page for an online store, designed with HTML, CSS.The page includes a product showcase and a responsive layout for a seamless shopping experience.
+                <p class="prjct-data">An interactive photography portfolio showcasing images in a sleek, exhibition-style gallery built with HTML, CSS, and JavaScript.
+                    Designed for an engaging visual experience, blending artistic imagery with responsive, modern web design.
                 </p>
-                <a class="cs-btn" href="" target="_blank">Case Study</a>
+                <a class="cs-btn" href="case-study2.html" target="_blank">Case Study</a>
                 </div>
         </div>
         <div class="project-infor">
@@ -672,15 +676,16 @@
             </div>
             <div class="project-content">
              <h3 class="title">Project 3</h3>  
-                <p class="prjct-data">A temperature converter is a simple web application that allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin.
+                <p class="prjct-data">Developed a responsive e-commerce platform for Varadhi Farms, showcasing a 
+                    diverse range of organic products
                 </p>
-                <a class="cs-btn" href="" target="_blank">Case Study</a>
+                <a class="cs-btn" href="case-study3.html" target="_blank">Case Study</a>
                 </div>
         </div>
 
            
     </div>
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
         <div class="contact-heading"> 
         <div class="contact-title">
             <h3 class="contact-head">CONTACT</h3>
