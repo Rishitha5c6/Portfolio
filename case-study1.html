@@ -100,6 +100,7 @@
        line-height: 30px;
 
        }
+       
        .project-btn{
        padding: 10px 48px; 
        background-color: white;
@@ -112,6 +113,20 @@
        transform: translateY(-3px);
 
        }
+       #prjct-img{
+        width: 900px;
+        height: 600px;
+        margin-right: 150px;
+        margin-left: 370px;
+       
+       }
+       .prjct-ov{
+       
+          line-height: 1.6;
+           width: 695px; 
+           color: gray;
+           margin-left: 450px;
+       }
        
        .project-overview{
        
@@ -120,14 +135,18 @@
         margin-top: 20px;
         width: 900px;
         line-height: 30px;
+       
        }
-      .project-overview1-head{
-        font-size: 40px;
+      .prjct-overview1{
+        font-size: 32px;
         font-family: "Source Sans Pro",sans-serif;
         margin-top: 20px;
-        color: #000000b1;
-       
-
+        color: black;
+        margin-left: 450px;
+        font-weight: 700;
+      }
+      .skills-list{
+        margin-left: 450px;
       }
       .html{
     color: gray;
@@ -142,14 +161,11 @@
     letter-spacing: 1px;
     margin-right: 15px;
     margin-bottom: 15px;
+    
    
    }
-   .skills-list{
-    margin-left: 430px;
-
-   }
+   
    .project-btn1{
-     
      padding: 8px 32px; 
        background-color: white;
        border-radius: 5px ;
@@ -158,7 +174,7 @@
        font-family: "Source Sans Pro",sans-serif;
        font-weight: 700;
       box-shadow: none;
-      margin-left: 10px;
+     
       border: 5ps solid rgb(0, 98, 185);
       transform: translateY(-3px);
    }
@@ -167,9 +183,9 @@
    
    }
    .buttons-live{
-    margin-left: 430px;
-   
+    margin-left: 450px;
    }
+   
 
     .footer-section{
         background: black;
@@ -248,6 +264,177 @@
        margin-top: 48px;
 
        }
+       @media only screen and (max-width: 768px) {
+
+body {
+  overflow-x: hidden;
+}
+
+.header-section {
+    height: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.nav-item {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.img1 {
+    margin: 0 auto;
+}
+
+.name {
+    text-align: center;
+    margin: 10px 2px;
+}
+
+.img-logo {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.prjct-section {
+  height: auto;
+  
+  margin-top: 100px;
+  background-size: cover;
+}
+#prjct-img{
+  margin-left: 60px;
+  width: 380px;
+  height: 280px;
+}
+
+.prjct-info {
+  padding: 20px 0;
+}
+
+.prjct-info1 {
+  font-size: 28px;
+ 
+}
+
+.prjct-info2 {
+  font-size: 16px;
+  width: 90%;
+  margin-left: 20px;
+  text-align: justify;
+  line-height: normal;
+ 
+}
+
+.project-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+.prjct-overview1{
+  width: 100%;
+  
+  margin-left: 20px;
+}
+
+.skills-list {
+ margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.html {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.buttons-live {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width:20%;
+}
+
+.project-btn1 {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.prjct-img{
+    width: 400px;
+    height: 250px;
+    margin-left: 50px;
+}
+.prjct-ov{
+    margin-left: 20px;
+    font-size: 18px;
+   
+    color: gray;
+    margin-right: 10px;
+}
+
+.live-btn {
+  font-size: 16px;
+  padding: 12px;
+}
+
+.footer-section {
+  height: auto;
+  padding: 30px 20px;
+}
+
+.footer {
+  flex-direction: column;
+ 
+}
+
+.name-f,
+.name-f1 {
+  margin: 10px 0;
+  
+  margin-left: 0;
+}
+
+.footer-content {
+  width: 100%;
+  margin: 20px 0;
+ 
+  margin-left: 0;
+}
+
+.icons {
+  margin: 20px 0;
+  margin-left: 0;
+  display: flex;
+
+  gap: 15px;
+}
+
+.footer-hr {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.end {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.social-icon-link {
+  width: auto;
+  padding: 0.4rem;
+  border-bottom: none;
+}
+}
+
+
       
       
   </style>
@@ -284,35 +471,36 @@
         </div>
     </div>
     <div class="project-overview" id="projects">
-        <img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg" width="850px" height="500px" text-align="center" style= "margin-top: 100px; margin-left: 330px";">
-        <h2 class="prjct-overview1-head" style="margin-left: 420px;">Project Overview</h2>
-        <p style="margin-left: 430px;  line-height: 1.6; width: 695px; color: gray;">
+        <img id="prjct-img" src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg">
+        <p class="prjct-overview1">Project Overview</p>
+        <p class="prjct-ov">
             This portfolio project is a responsive, single-page website built using HTML, CSS, and JavaScript. It showcases my personal profile, 
             technical skills, and real-time  projects in a clean and interactive layout. The site includes smooth navigation between sections
              like Home, About, Skills, and Projects, with a project button that redirects users to a separate projects page. Each project case study links to a detailed page
               for more information. 
         </p>
-        <p style="margin-left: 430px;  line-height: 1.6; width: 695px; color: gray;">
+        <p class="prjct-ov">
             CSS animations and transitions are used to enhance the user experience. The design is mobile-friendly and optimized for different screen sizes.
             All content is statically hosted using Netlify for fast performance and easy access. This project highlights my frontend development skills and serves as a professional digital portfolio.  
         </p>
 
+        <h2 class="prjct-overview1">Tools Used</h2>
 
+        <div class="skills-list">
+            <button class="html">HTML</button>
+            <button class="html">CSS</button>
+            <button class="html">JavaScript</button>
+           
+    
+        </div>
+        <h2 class="prjct-overview1">See Live</h2>
+        <div class="buttons-live">
+            <a href="https://portfolio1-prjct.netlify.app/"> <button class="project-btn" style="background-color: rgb(8, 8, 183); color: white;">LIVE LINK</button></a>
+            <a href="https://github.com/Rishitha5c6/Portfolio.git"> <button class="project-btn1" style=" color:rgb(8, 8, 183) ;">CODE LINK</button></a>
+        </div>
     </div>
-    <h2 class="prjct-overview1-head" style="margin-left: 420px; font-family:Source Sans Pro,sans-serif  ; font-size: 30px;">Tools Used</h2>
-
-    <div class="skills-list">
-        <button class="html">HTML</button>
-        <button class="html">CSS</button>
-        <button class="html">JavaScript</button>
-       
-
-    </div>
-    <h2 class="prjct-overview1-head" style="margin-left: 420px; font-family:Source Sans Pro,sans-serif  ; font-size: 30px ; margin-top: 50px;">See Live</h2>
-    <div class="buttons-live">
-        <a href="https://portfolio1-prjct.netlify.app/"> <button class="project-btn" style="background-color: rgb(8, 8, 183); color: white;">LIVE LINK</button></a>
-        <a href="https://github.com/Rishitha5c6/Portfolio.git"> <button class="project-btn1" style=" color:rgb(8, 8, 183) ;">CODE LINK</button></a>
-    </div>
+   
+   
 
     <div class="footer-section">
         <div class="footer">

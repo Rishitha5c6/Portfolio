@@ -10,7 +10,14 @@
         body{
             padding: 0;
             margin: 0;
-        }
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+        
         .header-section{
             position: fixed;
             background: white;
@@ -80,6 +87,7 @@
              margin-left: 0;
              margin-top: 15px;
            
+           
         }
        .home-info{
         text-align: center;
@@ -123,13 +131,13 @@
         margin-left: 2px;
        }
        .social-icon{
-        width: 27px;
+        width: 30px;
         height: 27px;
        
        }
        .social-icon-link{
        
-        width: 58%;
+        width: 100%;
     display: block;
     padding: 0.6rem;
     border-bottom: 2px solid white;
@@ -254,10 +262,9 @@
     font-weight: bold;
     margin-left: 150px;
     margin-top: 10px;
-    
-    
-
+   
    }
+
    .cntct:hover{
     transform: translateY(-3px);
     cursor: pointer;
@@ -518,6 +525,237 @@
     margin-top: 30px;
     font-size: 14px;
    }
+   
+
+
+
+@media (max-width: 768px) {
+    /* Header Section */
+    /* Base Styles: Mobile First */
+
+/* Header Section */
+.header-section {
+    height: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.nav-item {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.img1 {
+    margin: 0 auto;
+}
+
+.name {
+    text-align: center;
+    margin: 10px 2px;
+}
+
+/* Home Section */
+.home-section {
+    height: auto;
+    padding: 70px;
+}
+
+.home-info {
+    padding: 20px;
+}
+
+.home-info1 {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+.home-info2 {
+    font-size: 16px;
+    width: 100%;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.project-btn {
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.social-media-icons {
+    display: none;
+}
+
+/* About Section */
+.about-section {
+    height: auto;
+    margin-top: 0px;
+}
+
+.about-data {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 16px;
+}
+.get{
+    margin-left: 10px;
+}
+.about-heading{
+    margin-top: 100px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.content-para {
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.cntct{
+    margin-left: 10px;
+}
+.skill{
+    margin-left: 20px;
+}
+
+.skills-list {
+   margin-left: 20px;
+}
+
+.html {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+/* Projects Section */
+.project-section {
+    padding: 0px;
+}
+
+.project-infor {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+  
+}
+.heading{
+    margin-top: 90px;
+}
+
+.img-prjct img {
+    width: 100%;
+    height: auto;
+}
+.title{
+    margin-left: 170px;
+   
+}
+
+.project-content {
+    width: 100%;
+    margin: 10 auto;
+    margin-bottom: 0rem;
+}
+
+.prjct-data {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.cs-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-left: 160px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    height: auto;
+    padding: 20px;
+}
+
+.contact-info-box {
+    width: 90%;
+    margin: 20px auto;
+
+}
+.contact-title-info{
+    font-size: 20px;
+}
+
+.input-type,
+.text-area {
+    width: 80%;
+}
+
+.sub-btn {
+    margin-left: 0;
+    width: auto;
+    text-align: center;
+}
+
+/* Footer Section */
+
+.footer-section {
+  height: auto;
+  padding: 30px 20px;
+}
+
+.footer {
+  flex-direction: column;
+ 
+}
+
+.name-f,
+.name-f1 {
+  margin: 10px 0;
+  
+  margin-left: 0;
+}
+
+.footer-content {
+  width: 100%;
+  margin: 20px 0;
+ 
+  margin-left: 0;
+}
+
+.icons {
+  margin: 20px 0;
+  margin-left: 0;
+  display: flex;
+
+  gap: 15px;
+}
+
+.footer-hr {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.end {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.social-icon-link {
+  width: auto;
+  padding: 0.4rem;
+  border-bottom: none;
+}
+
+}
+
+
+
 
    
 
@@ -556,12 +794,12 @@
         </div>
         <div class="social-media-icons">
             <div class="media-icon">
-                <a href="https://www.linkedin.com/in/rishitha-boneni?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon-link">
+                <a href="www.linkedin.com/in/rishitha-boneni" class="social-icon-link">
                 <img src="	https://excelrfs.netlify.app/assets/png/linkedin-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
             <div class="media-icon">
-                <a href="https://github.com" class="social-icon-link">
+                <a href="https://github.com/" class="social-icon-link">
                 <img src="https://excelrfs.netlify.app/assets/png/github-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
@@ -725,24 +963,17 @@
     <div class="first-info">
         <h2 class="name-f1">SOCIAL</h2>
         <div class="icons">
-            <a href="#" class="footer-icon">
+            <a href="www.linkedin.com/in/rishitha-boneni" class="footer-icon">
                 <img src="https://excelrfs.netlify.app/assets/png/linkedin-ico.png" alt="icon" class="social-icon">
                 </a>
-                <a href="#" class="footer-icon">
+                <a href="https://github.com/" class="footer-icon">
                     <img src="https://excelrfs.netlify.app/assets/png/github-ico.png" alt="icon" class="social-icon">
                     </a>
-               
-               
-                    <a href="#" class="footer-icon">
-                    <img src="https://excelrfs.netlify.app/assets/png/twitter-ico.png" alt="icon" class="social-icon">
-                    </a>
-                
-                
-                    <a href="#" class="footer-icon">
+                    <a href="https://www.youtube.com/@bonenirishitha3969" class="footer-icon">
                     <img src="	https://excelrfs.netlify.app/assets/png/yt-ico.png" alt="icon" class="social-icon">
                     </a>
                 
-                    <a href="#" class="footer-icon">
+                    <a href="https://www.instagram.com/rishitha_boneni/" class="footer-icon">
                     <img src="https://excelrfs.netlify.app/assets/png/insta-ico.png" alt="icon" class="social-icon">
                     </a>
 
