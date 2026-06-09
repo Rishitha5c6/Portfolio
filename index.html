@@ -10,49 +10,42 @@
         body{
             padding: 0;
             margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: white;
         }
         .header-section{
             position: fixed;
-            background: white;
+            background:rgba(255, 255, 255, 0.1);
             width: 100%;
+            backdrop-filter: blur(10px);          /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
             top: 0;
             height: 90px;
-           
+           z-index: 1000;
             
         }
         .header{
             margin-top: 10px;
             display:flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    
+            justify-content: space-between;
+            align-items: center;
+        }
+     
 
-        }
-        .nav-item{
-            display: flex;
-           margin-right: 80px; 
-            gap: 62px;
-            
-        }
-        a{
-            text-decoration: none;
-            color: #000000b1;
-            font-size: 16px;
-            font-weight :700;
-            font-family: Source sans pro,sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            transition: color .3s;
-           
-        }
+
+        header.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+}
+       
+       
         .img1{
            width: 50px;
            height: 50px;
            border-radius: 160px;
            margin-left: 50px;
            margin-top: 10px;
+           border: 2px solid rgb(150, 143, 143);
         }
         .name{
           margin-left: 15px;
@@ -61,7 +54,7 @@
           font-weight: 700;
           letter-spacing: 1px;
           font-family:Source sans pro,sans-serif ;
-          color: #000000b1;
+          color: white;
         }
         .img-sec{
             vertical-align: middle;
@@ -70,17 +63,133 @@
             display: flex;
           
         }
-        a:hover{
-            color: blue;
-            cursor: pointer;
+         .nav-item{
+            display: flex;
+           margin-right: 80px; 
+            gap: 42px;
+            
+            
         }
+        .nav-item-btn {
+             padding: 8px 18px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid rgb(182, 180, 180);
+  color:rgba(17, 17, 17, 0.573);
+  transition: 0.3s;
+  text-decoration: none;
+   backdrop-filter: blur(10px);          /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  font-weight: 600;
+        }
+        .nav-item-btn:hover {
+  background: white;
+  color: #1e3c72;
+}
+.nav-item.scrolled{
+    background: rgba(255, 255, 255, 0.9);
+    
+}
+       
         .home-section{
-            background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(https://excelrfs.netlify.app/assets/svg/common-bg.svg);
-             height: 790px;
-             margin-left: 0;
-             margin-top: 15px;
+   height: 770px;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298,
+    #3b82f6,
+    #4facfe,
+    #00c6ff
+  );
+
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
            
         }
+        @keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.home-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(59,130,246,0.3), transparent 50%);
+}
+.circles span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.4), rgba(255,255,255,0.05));
+  backdrop-filter: blur(8px);
+  animation: float 12s linear infinite;
+
+  z-index: 0;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Different sizes & positions */
+.circles span:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  left: 10%;
+  top: 20%;
+  animation-duration: 12s;
+}
+
+.circles span:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  left: 90%;
+  top: 30%;
+  animation-duration: 10s;
+}
+
+.circles span:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  left: 70%;
+  top: 70%;
+  animation-duration: 14s;
+}
+
+
+.circles span:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  left: 80%;
+  top: 80%;
+  animation-duration: 11s;
+}
+.circles span:nth-child(5) {
+  width: 80px;
+  height: 80px;
+  left: 10%;
+  top: 90%;
+  animation-duration: 10s;
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
        .home-info{
         text-align: center;
         padding: 150px;
@@ -90,7 +199,7 @@
         color: white;
         font-size: 40.32px;
         font-family: "Source Sans Pro",sans-serif;
-
+        animation: fadeUp 1.5s ease forwards;
        }
        .home-info2{
         color: white;
@@ -99,6 +208,7 @@
         width: 900px;
        margin-left: 195px;
        line-height: 30px;
+       animation: fadeUp 2s ease forwards;
 
        }
        .project-btn{
@@ -112,6 +222,12 @@
        font-weight: 700;
        margin-top: 48px;
 
+       }
+       .project-btn:hover{
+        background-color: white;
+        color: #1e3c72;
+        transform: translateY(-3px);
+        cursor: pointer;
        }
        .social-media-icons{
         position: absolute;
@@ -152,7 +268,7 @@
   position: relative;
   overflow: hidden; 
   margin-left: 750px;
-  margin-top: 20px;
+ 
 }
   .mouse::before {
     content: '';
@@ -182,8 +298,9 @@
     }
     .about-section{
         text-align: center;
-        background: rgb(250, 250, 250);
+        background: #eaf4ff;
         height: 800px;
+        padding: 80px 8%;
         
     }
     .about-heading{
@@ -191,47 +308,45 @@
        font-weight: bold;
        font-family:"Source Sans Pro",sans-serif;
        margin-top: 20px;
-       letter-spacing: 3px;
-
-
-    }
-    .ab{
-        padding: 70px;
-        
+       letter-spacing: 2px;
+       color: #1e293b; 
+         margin-left: 30px;
 
     }
+   
     .about-data{
         font-size: 18px;
-        color:rgb(119, 119, 119) ;
-        line-height: 1.6;
+          color: #475569;
+        align-items: center;
         font-weight: 500;
         font-family:"Source Sans Pro",sans-serif;
-        width: 800px;
-        margin-left:298px;
-        margin-top: 40px;
+        
     }
     .about-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        text-align: left;
+        display: flex;
+        gap: 80x;
+       align-items: flex-start;
+        justify-content: center;
+        margin-top: 130px;
     }
-    .content1{
-       
-        text-align: left;
-        
-        
-
+    .about-content{
+      flex: 1;
+  max-width: 1000px; 
+  text-align: left;
     }
    .get{
     display: flex;
     font-size: 26px;
     margin-left: 150px;
     font-family:"Source Sans Pro",sans-serif ;
+     color: #1e293b;
+       margin-bottom: 20px;
+    margin-top: 0px;
   
    }
    .content-para{
-    max-width: 100rem;  
-    color: #808080;
+    width: 50%;  
+     color: #475569;
     font-size: 18px;
     font-family:"Source Sans Pro",sans-serif ;
     margin-left: 150px;
@@ -242,7 +357,7 @@
    
    .cntct{
     background-color: rgb(0, 98, 185);
-    color: white;
+   color: white;
     font-size: 18px;
     font-family:"Source Sans Pro",sans-serif ;
     padding: 0.8rem 3rem;
@@ -253,23 +368,27 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     font-weight: bold;
     margin-left: 150px;
-    margin-top: 10px;
+  
+    transition: 0.3s;
     
     
 
    }
+
    .cntct:hover{
     transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,198,255,0.4);
     cursor: pointer;
 
 
    }
+   
    .html{
-    color: gray;
-    background-color: #80808030;
+    color: #1e293b;
+    background-color: #dbeafe;
     border-color:#8080805c ;
-    border: 1px;
-    border-radius: 4px;
+    border: 2px solid ;
+    border-radius: 17px;
     padding: 1rem  2.2rem;
     font-size: 16px;
     font-weight: bold;
@@ -277,29 +396,32 @@
     letter-spacing: 1px;
     margin-right: 15px;
     margin-bottom: 15px;
-    
-
-    
-    
-
+    cursor: pointer;
+  transition: 0.3s;
    }
-   .skills-list{
-    margin-left: 80px;
-    
-  
-   }
+   
+   .html:hover {
+  background: #3b82f6;
+  color: white;
+}
+   
+   .skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* 3 per row */
+  justify-content: center;
+}
    
    .skill{
     display: flex;
     font-size: 26px;
-    margin-left: 80px;
     font-family:"Source Sans Pro",sans-serif ;
+    color: #1e293b;
+    flex: 1;
+    margin-top: 0px;
     
    }
    .project-section{
-        text-align: center;
-        
-        
+        text-align: center;   
     }
     .heading{
        font-size: 38px;
@@ -307,6 +429,7 @@
        font-family:"Source Sans Pro",sans-serif;
        margin-top: 20px;
        letter-spacing: 3px;
+       color: #033b9a;
 
 
     }
@@ -317,7 +440,7 @@
     }
     .about-data{
         font-size: 18px;
-        color:rgb(119, 119, 119) ;
+        color:rgb(80, 80, 185);
         line-height: 1.6;
         font-weight: 500;
         font-family:"Source Sans Pro",sans-serif;
@@ -350,41 +473,45 @@
     font-family:"Source Sans Pro",sans-serif;
     margin-bottom: 20px;
     margin-left: 20px;
+    color: #033b9a;
     
     }
     .prjct-data{
         font-size: 20px;
-    color: grey;
+    color: rgb(80, 80, 185);
     max-width: 60rem;
     line-height: 1.7;
     margin-bottom: 3rem;
     font-family:"Source Sans Pro",sans-serif;
+
     }
     .cs-btn{
     background-color: rgb(0, 98, 185);
     color: white;
     font-size: 18px;
     font-family:"Source Sans Pro",sans-serif ;
-    padding: 0.6rem 2rem;
+    padding: 0.7rem 1.5rem;
     letter-spacing: 2px;
     border-color: rgb(0, 98, 185);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: transform 0.3s;  
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    text-decoration: none;
     }
     .cs-btn:hover{
         color: white;
         transform: translateY(-3px);
     }
    .contact-section{
-    background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(https://excelrfs.netlify.app/assets/svg/common-bg.svg);
+    background: #dbeafe;
    height: 1110px;
 }
 .contact-heading{
     text-align: center;
+    
 }
 .contact-head{
-    color: white;
+    color:#1e3c72 ;
    padding-top: 100px;
    font-size: 38px;
    font-family:"Source Sans Pro",sans-serif ;
@@ -394,7 +521,7 @@
 
 }
 .contact-title-info{
-    color: white;
+    color: #1e3c72;
     font-size: 22px;
     font-family:"Source Sans Pro",sans-serif ;
 }
@@ -405,6 +532,7 @@
    margin-left: 355px;
   border-radius: 5px;
    margin-top: 90px;
+   border:1px solid #1e3c72;
 }
 .contact-info{
     text-align: start;
@@ -413,7 +541,7 @@
    
 }
 .cntct-list{
-    color: #666666;
+    color: #1e3c72;
     font-size: 16px;
     font-family:"Source Sans Pro",sans-serif ;
     letter-spacing: 1px;
@@ -469,12 +597,53 @@
         
     }
     .footer-section{
-        background: black;
+        background:  linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298,
+    #3b82f6,
+    #4facfe,
+    #00c6ff
+  );
         height: 350px;
-    }
+        background-size: 300% 300%;
+        position: relative;
+        overflow: hidden;
+    }    
+      
     .footer{
         display: flex;
     }
+   .footer-section::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  top: -80px;
+  left: -80px;
+  z-index: 0;
+}
+
+/* Circle 2 */
+.footer-section::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  bottom: -60px;
+  right: -60px;
+  z-index: 0;
+}
+
+/* Keep content above */
+.footer-section * {
+  position: relative;
+  z-index: 1;
+}
     .name-f{
         color: white;
         margin-left: 160px;
@@ -502,7 +671,11 @@
    .icons{
     margin-left: 500px;
     margin-top: 30px;
+    text-decoration: none;
 
+   }
+   a{
+    text-decoration: none;
    }
    .footer-icon{
     margin-right: 10px;
@@ -510,7 +683,7 @@
    .footer-hr{
     margin-top: 70px;
     width: 1200px;
-    border-color: #666666;
+    border-color: white;
    }
    .end{
     color: white;
@@ -518,6 +691,11 @@
     margin-top: 30px;
     font-size: 14px;
    }
+   @media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+  }
+}
 
    
 
@@ -529,16 +707,16 @@
         <div class="imgs">
         <div class="img-logo">
             <div class="img-l">
-        <img src="rimg.jpeg" class="img1" >
+        <img src="rishithaimg.jpeg" class="img1" >
     </div>
         <span class="name">RISHITHA</span>
     </div>
 </div>
       <div class="nav-item">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
+        <a href="#home" class="nav-item-btn">HOME</a>
+        <a href="#about" class="nav-item-btn">ABOUT</a>
+        <a href="#projects" class="nav-item-btn">PROJECTS</a>
+        <a href="#contact" class="nav-item-btn">CONTACT</a>
       </div>
     </div>
 </div>
@@ -561,7 +739,7 @@
                 </a>
             </div>
             <div class="media-icon">
-                <a href="https://github.com" class="social-icon-link">
+                <a href="https://github.com/Rishitha5c6" class="social-icon-link">
                 <img src="https://excelrfs.netlify.app/assets/png/github-ico.png" alt="icon" class="social-icon">
                 </a>
             </div>
@@ -585,6 +763,14 @@
                    
                 </div>
               </div>
+              <div class="circles">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div class="dots"></div>
     </div>
     <div class="about-section" id="about">
         <div class="ab">
@@ -601,16 +787,15 @@
                 <h3 class="get">
                     Get to Know me!
                 </h3>
-                <d iv class="content1">
+                <div class="content1">
                   <p class="content-para"> Hey!It's <b>Rishitha Boneni</b>,a passionate <b>Front-End Developer</b> focused on creating intuitive, responsive, and visually appealing web experiences. 
                     With expertise in HTML, CSS and JavaScript, I’m dedicated to turning ideas into seamless, user-friendly interfaces.</p> 
                 <p class="content-para">I’m always learning and adapting to the latest trends in front-end development to deliver high-quality, accessible websites. 
                  I'd love to connect!  Feel free to contact me here.  </p>
-                    
                
                 <a href="./#contact" class="btn"><button class="cntct">CONTACT</button></a>
             </div>
-
+            </div>
            
             <div class="skills-section">
                 <div class="skills">
@@ -626,14 +811,12 @@
 
                 </div>
 
-             
-
             </div>
         </div>
         </div>
        
 
-    </div>
+    
 
     <div class="project-section" id="projects">
         <div class="prjct">
@@ -685,35 +868,74 @@
 
            
     </div>
-    <div class="contact-section" id="contact">
-        <div class="contact-heading"> 
+   <div class="contact-section" id="contact">
+    <div class="contact-heading">
         <div class="contact-title">
             <h3 class="contact-head">CONTACT</h3>
         </div>
+
         <p class="contact-title-info">
-            If you're looking for a Front-End developer,let's connect! Feel free to reach out via email or social media.
-
+            If you're looking for a Front-End developer, let's connect!
+            Feel free to reach out via email or social media.
         </p>
-
     </div>
+
     <div class="contact-info-box">
-        <div class="contact-info">
+        <form
+            class="contact-info"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify
+            data-netlify-honeypot="bot-field"
+        >
+
+            <!-- Required for Netlify -->
+            <input type="hidden" name="form-name" value="contact">
+
+            <!-- Spam protection -->
+            <p hidden>
+                <input name="bot-field">
+            </p>
+
             <div class="contact-form">
                 <p class="cntct-list">Name</p>
-                <input type="text" placeholder="Enter Your Name" class="input-type">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    class="input-type"
+                    required
+                >
             </div>
+
             <div class="contact-form">
                 <p class="cntct-list">Email</p>
-                <input type="text" placeholder="Enter Your Email" class="input-type">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Your Email"
+                    class="input-type"
+                    required
+                >
             </div>
+
             <div class="contact-form">
                 <p class="cntct-list">Message</p>
-                <textarea  rows="10" cols="98" class="text-area" placeholder="Enter Your Message" name="message" id="message"></textarea>
+                <textarea
+                    rows="10"
+                    name="message"
+                    class="input-type"
+                    placeholder="Enter Your Message"
+                    required
+                ></textarea>
             </div>
-            <button class="sub-btn">SUBMIT</button>
 
-        </div>
+            <button type="submit" class="sub-btn">
+                SUBMIT
+            </button>
 
+        </form>
     </div>
 </div>
 <div class="footer-section">
@@ -725,10 +947,10 @@
     <div class="first-info">
         <h2 class="name-f1">SOCIAL</h2>
         <div class="icons">
-            <a href="#" class="footer-icon">
+            <a href="https://www.linkedin.com/in/rishitha-boneni?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer-icon">
                 <img src="https://excelrfs.netlify.app/assets/png/linkedin-ico.png" alt="icon" class="social-icon">
                 </a>
-                <a href="#" class="footer-icon">
+                <a href="https://github.com/Rishitha5c6" class="footer-icon">
                     <img src="https://excelrfs.netlify.app/assets/png/github-ico.png" alt="icon" class="social-icon">
                     </a>
                
@@ -738,11 +960,11 @@
                     </a>
                 
                 
-                    <a href="#" class="footer-icon">
+                    <a href="https://www.youtube.com/@bonenirishitha3969" class="footer-icon">
                     <img src="	https://excelrfs.netlify.app/assets/png/yt-ico.png" alt="icon" class="social-icon">
                     </a>
                 
-                    <a href="#" class="footer-icon">
+                    <a href="https://www.instagram.com/rishitha_boneni/" class="footer-icon">
                     <img src="https://excelrfs.netlify.app/assets/png/insta-ico.png" alt="icon" class="social-icon">
                     </a>
 
