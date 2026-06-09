@@ -881,15 +881,14 @@
     </div>
 
     <div class="contact-info-box">
-        <form
-            class="contact-info"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify
-            data-netlify-honeypot="bot-field"
-        >
-
+       <form
+    class="contact-info"
+    name="contact"
+    method="POST"
+    action="/success.html"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+>
             <!-- Required for Netlify -->
             <input type="hidden" name="form-name" value="contact">
 
@@ -976,5 +975,10 @@
 <hr class="footer-hr">
 <p class="end">© Copyright 2025. Made by <u>Rishitha Boneni</u></p>
 </div>
+<form name="contact" netlify hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <textarea name="message"></textarea>
+</form>
 </body>
 </html>
