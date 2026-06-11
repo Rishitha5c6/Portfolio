@@ -9,6 +9,7 @@
      body{
             padding: 0;
             margin: 0;
+            overflow-x: hidden;
         }
         .header-section{
             position: fixed;
@@ -109,26 +110,71 @@
        letter-spacing: 2px;
        font-family: "Source Sans Pro",sans-serif;
        font-weight: 700;
-       transform: translateY(-3px);
+       overflow: hidden;
 
        }
-       
-       .project-overview{
-       
-        font-size: 20px;
-        font-family: "Source Sans Pro",sans-serif;
-        margin-top: 20px;
-        width: 900px;
-        line-height: 30px;
-       }
-      .project-overview1-head{
-        font-size: 40px;
-        font-family: "Source Sans Pro",sans-serif;
-        margin-top: 20px;
-        color: #000000b1;
-       
+       .project-overview {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+.project-image {
+    width: 850px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 100px auto 0;
+}
+.prjct-overview1-head {
+    font-size: 40px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #000000b1;
+    
+    margin: 50px 0px 30px 100px;
+}
+ .prjct-overview1{
+    font-size: 40px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #000000b1;
+    
+    margin: 50px 0px 30px 400px;
+}
 
-      }
+       .overview-text {
+    max-width: 695px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+    color: gray;
+    font-family: "Source Sans Pro", sans-serif;
+}
+       .project-image {
+    width: 850px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 100px auto 0;
+}
+       
+     .project-overview {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+      .prjct-overview1-head {
+    font-size: 40px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #000000b1;
+    
+    margin: 50px 0px 30px 100px;
+}
       .html{
     color: gray;
     background-color: #80808030;
@@ -148,10 +194,14 @@
     cursor: pointer;
     background-color: #8080805c;
    }
-   .skills-list{
-    margin-left: 430px;
-
-   }
+    .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 900px;
+    margin: 40px auto 30px 360px;
+    padding-left: 40px;
+}
    .project-btn1{
      
      padding: 8px 32px; 
@@ -164,16 +214,20 @@
       box-shadow: none;
       margin-left: 10px;
       border: 5ps solid rgb(0, 98, 185);
-      transform: translateY(-3px);
+      overflow: hidden;
    }
    .buttons-live:hover{
     cursor: pointer;
    
    }
-   .buttons-live{
-    margin-left: 430px;
-   
-   }
+    .buttons-live {
+    display: flex;
+    margin-left: 400px;
+    gap: 20px;
+    margin-top: 30px;
+     position: static;   /* Important */
+    z-index: auto;  
+}
 
      .footer-section{
         background:  linear-gradient(
@@ -263,6 +317,166 @@
        a{
         text-decoration: none;
        }
+       
+       /* ================= MOBILE RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    .header-section {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img1 {
+        margin-left: 0;
+    }
+
+    .name {
+        margin-top: 18px;
+        font-size: 16px;
+    }
+
+    .nav-item {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-right: 0;
+        padding-bottom: 10px;
+    }
+
+    /* Hero Section */
+    .prjct-section {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .prjct-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .prjct-info1 {
+        font-size: 24px;
+    }
+
+    .prjct-info1 h2 {
+        font-size: 40px;
+        line-height: 1.3;
+    }
+
+    .prjct-info2 {
+        width: 100%;
+        margin-left: 0;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .live-btn {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+
+    /* Project Overview */
+    .project-overview {
+        width: 90%;
+        margin: auto;
+        font-size: 16px;
+    }
+     .prjct-overview1{
+        margin-left: 22px!important;
+        
+        font-size: 28px !important;
+    }
+
+
+    .project-overview img {
+        width: 100% !important;
+        height: auto !important;
+        margin: 50px 0 20px 0 !important;
+    }
+
+    .prjct-overview1-head {
+        margin-left: 0 !important;
+        text-align: center;
+        font-size: 28px !important;
+    }
+
+    .project-overview p {
+        width: 100% !important;
+        margin-left: 0 !important;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* Tools Used */
+   .skills-list {
+        margin-left: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 20px;
+    }
+    .html {
+        margin: 5px;
+        padding: 12px 20px;
+    }
+
+    /* Live and Code Buttons */
+   .buttons-live {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        gap: 15px;
+        
+    }
+
+    .project-btn,
+    .project-btn1 {
+        width: 50%;
+        margin-left: 0;
+        overflow: hidden;
+        
+    }
+
+    /* Footer */
+    .footer-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .name-f,
+    .name-f1,
+    .footer-content,
+    .icons {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footer-content {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .icons {
+        margin-top: 20px;
+    }
+
+    .footer-hr {
+        width: 90%;
+    }
+}
       
       
   </style>
@@ -300,9 +514,9 @@
         </div>
     </div>
     <div class="project-overview" id="projects">
-        <img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg" width="850px" height="500px" text-align="center" style= "margin-top: 100px; margin-left: 330px";">
-        <h2 class="prjct-overview1-head" style="margin-left: 420px;">Project Overview</h2>
-        <p style="margin-left: 430px;  line-height: 1.6; width: 695px; color: gray;">
+        <img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg" class="project-image">
+        <h2 class="prjct-overview1-head">Project Overview</h2>
+        <p class="overview-text">
             This project is a responsive and interactive photography portfolio website designed to showcase photographic work in an exhibition-style gallery.
              Built using HTML, CSS, and JavaScript, the website features a clean, modern interface that emphasizes visual storytelling. Key elements include a grid-based 
              image layout, hover effects, modal/lightbox functionality for enlarged viewing, and smooth
@@ -312,7 +526,7 @@
 
 
     </div>
-    <h2 class="prjct-overview1-head" style="margin-left: 420px; font-family:Source Sans Pro,sans-serif  ; font-size: 30px;">Tools Used</h2>
+    <h2 class="prjct-overview1" >Tools Used</h2>
 
     <div class="skills-list">
         <button class="html">HTML</button>
@@ -321,7 +535,7 @@
        
 
     </div>
-    <h2 class="prjct-overview1-head" style="margin-left: 420px; font-family:Source Sans Pro,sans-serif  ; font-size: 30px ; margin-top: 50px;">See Live</h2>
+    <h2 class="prjct-overview1">See Live</h2>
     <div class="buttons-live">
         <a href="https://photography-portfolio-project.netlify.app/"> <button class="project-btn" style="background-color: rgb(8, 8, 183); color: white;">LIVE LINK</button></a>
         <a href="https://github.com/Rishitha5c6/photography-portfolio.git"> <button class="project-btn1" style=" color:rgb(8, 8, 183) ;">CODE LINK</button></a>
